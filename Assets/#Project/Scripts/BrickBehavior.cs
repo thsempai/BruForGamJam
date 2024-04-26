@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BrickBehavior : MonoBehaviour
+public class BrickBehavior : ColorChanger
 {
     // Start is called before the first frame update
     [SerializeField] private Vector3 startOffset = Vector3.up * 10;
-    void Start()
+    override protected void Start()
     {
+        base.Start();
         GetComponent<Renderer>().enabled = false;
     }
 
